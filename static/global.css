@@ -1,0 +1,34 @@
+:root{
+  --bg: #222;
+  --fg: #fff;
+}
+body{
+    color: var(--fg);
+    background-color: var(--bg);
+}
+*{
+  transition-duration: 0.2s;
+  transition-property:all;
+}
+div.NotCompatibleDiv{
+    padding: 10px;
+    border: var(--fg) 1px solid;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+
+
+nav>a{
+    background-color: aqua;
+}
+nav>a.currentpage{
+    background-color: red;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #eee;
+    --fg: #121212;
+    }
+}

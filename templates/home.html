@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Home Page</h2>
+    {% if os == "Windows"%}
+        <h3>Compatible</h3>
+    {% else %}
+    <div class="NotCompatibleDiv">
+        Web Scraping is not available for {{os}}. 
+    </div>
+    <form action="{% url 'test' %}">
+        <label>Upload Image</label>
+        <button type="submit">test</button>
+    </form>
+    {% endif %}
+{% endblock %}

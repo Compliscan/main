@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <title>Compliscan</title>
+</head>
+<body>
+    <nav>
+        {%if request.get_full_path == '/Instructions'%}
+        <a class="currentpage" href="/Instructions">Instructions</a>
+        {%else%}
+        <a href="/Instructions">Instructions</a>
+        {%endif%}
+
+        {%if request.get_full_path == '/'%}
+        <a class="currentpage" href="/">Home</a>
+        {%else%}
+        <a href="/">Home</a>
+        {%endif%}
+
+        {%if request.get_full_path == '/About'%}
+        <a class="currentpage" href="/About">About</a>
+        {%else%}
+        <a href="/About">About</a>
+        {%endif%}
+
+    </nav>
+    {% block content %}
+    {% endblock%}
+</body>
