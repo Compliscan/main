@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Data</h2> 
+{% if data %}
+{% for col in data%}
+<p>{{col.id}}: {{col.test}}</p>
+{%endfor%}
+{%endif%}
+
+{% endblock %}

@@ -23,6 +23,7 @@ def func():
     return supabase_service.fetch_todos().data
 
 
-async def test(req):
-    res= HttpResponse(func())
-    return res
+def test(req):
+    data= func()
+    context={'data':data}
+    return render(req,'data.html',context)
